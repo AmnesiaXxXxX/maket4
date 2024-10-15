@@ -1,0 +1,214 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.header {
+    position: absolute;
+    height: 72px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    width: auto ;    
+}
+
+.header__logo img{
+    width: 152px;
+    height: 32px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 116px;
+    margin-right: 40px;
+}
+
+.header__catalog-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    width: 140px;
+    height: 40px;
+    background: #70C05B ;
+    color: white;
+    border-radius: 4px;
+    margin: 16px;
+    margin-left: 0px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    border: 1px transparent solid;
+    transition: all 0.25s;
+
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    
+
+}
+
+.header__catalog-button:hover {
+    border: 1px #589748 solid 
+}
+
+
+
+.header__catalog-button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}
+
+.search-bar input {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    margin-top: 16px;
+    margin-right: 40px;
+    gap: 10px;
+    
+    width: 375px;
+    height: 40px;
+
+    /* Main/Surface */
+    background: #FFFFFF;
+    /* Main/Secondary */
+    border: 1px solid #70C05B;
+    border-radius: 4px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.7px;
+
+    color: #8F8F8F;
+
+}
+
+
+
+.search-bar .search-icon {
+    position: absolute;
+    margin-top: 25px;
+    left: 807px;
+    width: 20px; /* Размер иконки */
+    height: 20px;
+    cursor: pointer; /* Курсор в виде руки при наведении */
+}
+
+.header-icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-icons div:not(:last-child) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 11px;
+    cursor: pointer;
+
+
+}
+
+.header-icons div:not(:last-child) img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 8px;
+}
+
+.favorites {
+    
+    margin-top: 11px;
+    margin-right: 12.5px;
+}
+
+.favorites img{
+    width: 24px;
+    height: 24px;
+    margin-bottom: 8px;
+    
+}
+
+.header-icons span {
+    width: 65px;
+    height: 18px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #414141;
+}
+
+.orders {
+    margin-right: 4px;
+}
+
+.notification {
+    z-index: 2;
+    padding: 0.25px;
+    position: relative;
+    bottom:53.6px;
+    left:6.1px;
+    color: white;
+    background: #FF6633;
+    border-radius: 4px;
+    font-size: 7px;
+    height: 11px;
+    width: 11px;
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: row;
+    margin-left: 32px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+}
+
+.user-profile .avatar {
+    width: 40px;
+    height: 40px;
+}
+
+.user-profile p {
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 85px;
+    height: 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #232323;
+
+}
+
+.user-profile .arrow-down {
+    width: 24px;
+    height: 24px;
+    margin-top: 8px;
+    margin-left: 18.3px;
+    cursor: pointer;
+
+}
