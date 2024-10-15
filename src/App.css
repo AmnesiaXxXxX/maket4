@@ -1,4 +1,11 @@
 .App {
   background: #F4F4F2;
+  justify-content: center;
 }
+*{ 
+  justify-content: center;
 
+ }
+.content {
+  margin-top: 72px
+}

@@ -1,36 +1,41 @@
 import React from "react";
+import { useState, useEffect } from 'react';
 import "./Header.css"
+import "./Header_mobile.css"
+  
 function Header() {
+    console.log(navigator.userAgent)
+    const isMobile = !/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    console.log(isMobile ? "Не мобильное" : "Мобильное")
   return (
     <nav>
-      <header class="header">
-          <div class="header__logo">
-            <img src="../images/logo152.png" alt="Лого"/>
+      <header className="header">
+          <div className="header__logo">
+            <img src={isMobile ? "../images/logo152.png" : "../images/logo49.png"}  className={isMobile ? "" : "mobile"} alt="Лого"/>
           </div>
           
-          <button class="header__catalog-button">
+          <button  className={isMobile ? "header__catalog-button" : "header__catalog-button mobile"}>
             <img src="../images/icons/menu_icon_white.png" />
-            Каталог
+            {isMobile ? "Каталог" : ""}
           </button>
-          <div class="search-bar">
-            <img src="../images/icons/search_icon.png" alt="Иконка поиска" class="search-icon"/>
+          <div className={isMobile ? "search-bar" : "search-bar mobile"}>
             <input type="text" placeholder="Найти товар"/>
           </div>
-          <div class="header-icons">
-              <div class="favorites">
+          <div className={isMobile ? "header-icons" : "header-icons mobile"}>
+              <div className="favorites">
                   <img src="../images/icons/favorite_icon24.png" alt="Избранное"/>
                   <span>Избранное</span>
               </div>
-              <div class="orders">
+              <div className="orders">
                   <img src="../images/icons/orders-icon24.png" alt="Заказы"/>
                   <span>Заказы</span>
               </div>
-              <div class="cart">
+              <div className="cart">
                   <img src="../images/icons/shop-cart-icon24.png" alt="Корзина"/>
                   <span>Корзина</span>
-                  <div class="notification"><p>99+</p></div>
+                  <div className="notification"><p>99+</p></div>
               </div>
-              <div class="user-profile">
+              <div className={isMobile ? "user-profile" : "user-profile mobile"}>
                   <img src="../images/icons/user-avatar.png" className='avatar' alt="Аватар"/>
                   <p>Алексей</p>
                   <img src="../images/icons/schevron_down.png" className="arrow-down" alt="Стрелка"/>

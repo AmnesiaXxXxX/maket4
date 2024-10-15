@@ -1,0 +1,45 @@
+
+
+
+.header__logo img.mobile{
+        width: 49px;
+        height: 40px;
+        margin-left: 20px;
+        margin: 20px;
+}
+
+.header__catalog-button.mobile {
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+}
+
+.header__catalog-button.mobile img {
+        margin: 0px;
+}
+
+.search-bar.mobile input {
+        flex: none;
+        width: 325px;
+        max-width: 325px;
+        margin-right: 20px;
+
+}
+
+
+.search-bar.mobile .search-icon {
+        left: 442px;
+}
+
+.header-icons.mobile div{ 
+        margin-right: 0px;
+}
+
+.user-profile.mobile p {
+        display: none;
+}
+    
+.user-profile.mobile .arrow-down {
+        display: none;
+}
