@@ -1,0 +1,30 @@
+.content *{
+    align-content: center;
+    max-width : 100%;
+}
+
+
+.home-advantages__title {
+    /* title */
+
+    width: 1000px;
+    height: 54px;
+
+    /* Desc/Header/M */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 150%;
+    /* identical to box height, or 54px */
+
+    /* Main/onSurface */
+    color: #414141;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin: 80px 116px;
+
+}

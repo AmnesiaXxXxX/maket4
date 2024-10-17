@@ -1,11 +1,15 @@
-.App {
+#root {
+  margin-left: 278px;
+  width: 1440px;
   background: #F4F4F2;
+  display: flex;
   justify-content: center;
+  align-content: center;
 }
 *{ 
   justify-content: center;
-
- }
+}
 .content {
+  justify-content: center;
   margin-top: 72px
 }

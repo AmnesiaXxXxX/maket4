@@ -1,12 +1,12 @@
 import React from "react";
-import { useState, useEffect } from 'react';
 import "./Header.css"
 import "./Header_mobile.css"
-  
+import Autocomplete from "./Autocomplete"
 function Header() {
     console.log(navigator.userAgent)
     const isMobile = !/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     console.log(isMobile ? "Не мобильное" : "Мобильное")
+    const suggestions = ['Молоко', 'Яблоки', 'Orange', 'Pineapple', 'Grapes'];
   return (
     <nav>
       <header className="header">
@@ -15,11 +15,13 @@ function Header() {
           </div>
           
           <button  className={isMobile ? "header__catalog-button" : "header__catalog-button mobile"}>
-            <img src="../images/icons/menu_icon_white.png" />
+            <img src="../images/icons/menu_icon_white.png" alt=""/>
             {isMobile ? "Каталог" : ""}
           </button>
           <div className={isMobile ? "search-bar" : "search-bar mobile"}>
-            <input type="text" placeholder="Найти товар"/>
+            <Autocomplete suggestions={suggestions}/>
+            
+            
           </div>
           <div className={isMobile ? "header-icons" : "header-icons mobile"}>
               <div className="favorites">

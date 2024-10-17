@@ -100,11 +100,7 @@
     letter-spacing: 0.7px;
 
     color: #8F8F8F;
-    background-image: url('../../public/images/icons/search_icon.png');
-    background-size: 24px 24px; /* Размер иконки (ширина x высота) */
-    background-position: 98% center; /* Позиция иконки внутри поля */
-    background-repeat: no-repeat; /* Предотвращает повторение изображения */
-    padding-right: 35px; /* Отступ, чтобы текст не перекрывал иконку */
+    
 }
 
 
@@ -215,3 +211,16 @@
 
 }
 
+.search-bar button {
+    background: url('../../public/images/icons/search_icon.png') center / cover;
+    background-size: 24px 24px; /* Размер иконки (ширина x высота) */
+    background-position: 98% -100%; /* Позиция иконки внутри поля */
+    background-repeat: no-repeat; /* Предотвращает повторение изображения */
+    padding-right: 35px; /* Отступ, чтобы текст не перекрывал иконку */
+    border: none;
+    height: 42px;
+    width: 42px;
+    top: 8;
+    cursor: pointer;
+    z-index: 10;
+  }
