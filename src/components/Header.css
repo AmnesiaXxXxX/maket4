@@ -23,8 +23,8 @@
     flex-grow: 0;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 116px;
-    margin-right: 40px;
+    margin-left: 1px;
+    margin-right: 30px;
 }
 
 .header__catalog-button {
@@ -41,19 +41,12 @@
     border-radius: 4px;
     margin: 16px;
     margin-left: 0px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+    margin-right: 0px;
     border: 1px transparent solid;
-    transition: all 0.25s;
-
-    
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
-    
-
 }
 
 .header__catalog-button:hover {
@@ -79,39 +72,35 @@
     margin-top: 16px;
     margin-right: 40px;
     gap: 10px;
-    
     width: 375px;
     height: 40px;
-
-    /* Main/Surface */
     background: #FFFFFF;
-    /* Main/Secondary */
     border: 1px solid #70C05B;
     border-radius: 4px;
-
-    /* Inside auto layout */
     flex: none;
     order: 1;
     flex-grow: 1;
-
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.7px;
-
     color: #8F8F8F;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 }
 
-.search-bar input[type="text"] {
+.search-bar input:not(.active) {
+    border-bottom: 1px solid #70C05B;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.search-bar input.active {
     border-bottom: none;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 }
-
-
 
 .header-icons {
     display: flex;

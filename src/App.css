@@ -1,7 +1,5 @@
 #root {
-  margin-left: 278px;
-  width: 1440px;
-  background: #F4F4F2;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-content: center;

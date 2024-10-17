@@ -3,28 +3,30 @@
     max-width : 100%;
 }
 
+.content {
+    background: #fbf8ec;
+    }
 
-.home-advantages__title {
-    /* title */
-
+.products__title {
     width: 1000px;
     height: 54px;
-
-    /* Desc/Header/M */
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
     line-height: 150%;
-    /* identical to box height, or 54px */
-
-    /* Main/onSurface */
     color: #414141;
-
-
-    /* Inside auto layout */
     flex: none;
     order: 0;
     flex-grow: 1;
-    margin: 80px 116px;
+    margin-left: 116px;
 
+    margin-top: 75px;
+    margin-bottom: 40px;
+}
+
+.products-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-left: 116px;
 }

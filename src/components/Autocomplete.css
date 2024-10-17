@@ -29,9 +29,7 @@
 
   }
 
-  .autocomplete-suggestions.disable {
-    display: none;
-  }
+
   
   .autocomplete-suggestion {
     padding: 10px;
