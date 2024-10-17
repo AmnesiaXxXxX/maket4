@@ -5,7 +5,12 @@ import './Autocomplete.css';
 const Autocomplete = ({ suggestions }) => {
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const [inputValue, setInputValue] = useState('');
+  const [inputFocused, setFocused] = useState(false);
   
+  const setFocused = (event) => {
+    
+  }
+
   const handleChange = (event) => {
     const inputValue = event.target.value;
     setInputValue(inputValue);
@@ -23,6 +28,8 @@ const Autocomplete = ({ suggestions }) => {
     setFilteredSuggestions([]);
   };
 
+
+
   return (
     <div className="autocomplete-container">
       <input
@@ -30,9 +37,10 @@ const Autocomplete = ({ suggestions }) => {
         type="text"
         value={inputValue}
         onChange={handleChange}
+        onFocus={inputFocused}
         placeholder="Type to search..."
       />
-      <ul className={inputValue ? "autocomplete-suggestions disable" : "autocomplete-suggestions"}>
+      <ul className={"autocomplete-suggestions"}>
         {filteredSuggestions.map((suggestion, index) => (
           <li key={index} className='autocomplete-suggestion' onClick={() => handleSelect(suggestion)}>
             {suggestion}

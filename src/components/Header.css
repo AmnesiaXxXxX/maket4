@@ -68,6 +68,7 @@
     margin-right: 15px;
 }
 
+
 .search-bar input {
     box-sizing: border-box;
 
@@ -100,10 +101,15 @@
     letter-spacing: 0.7px;
 
     color: #8F8F8F;
-    
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
-
+.search-bar input[type="text"] {
+    border-bottom: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
 
 
 
