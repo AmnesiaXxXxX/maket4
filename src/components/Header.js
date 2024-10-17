@@ -6,7 +6,7 @@ function Header() {
     console.log(navigator.userAgent)
     const isMobile = !/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     console.log(isMobile ? "Не мобильное" : "Мобильное")
-    const suggestions = ['Молоко', 'Яблоки', 'Orange', 'Pineapple', 'Grapes'];
+    const suggestions = ['Молоко', 'Яблоки', 'Orange', 'Pineapple', 'Grapes', 'HTML', "CSS", "JavaScript"];
   return (
     <nav>
       <header className="header">
