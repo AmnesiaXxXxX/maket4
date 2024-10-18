@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Autocomplete.css';
 
 const Autocomplete = ({ suggestions }) => {
@@ -69,7 +69,7 @@ const Autocomplete = ({ suggestions }) => {
         onFocus={handleFocus}
         onBlur={handleBlur}
         onKeyDown={handleSend}
-        placeholder="Type to search..."
+        placeholder="Найти товар"
       />
       {inputFocused && filteredSuggestions.length > 0 && (
         <ul className={`autocomplete-suggestions `}>

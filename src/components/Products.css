@@ -12,7 +12,7 @@
 .product-name {
     margin-top: 26px;
     margin-left: 8px;
-    margin-right: 18px;
+    margin-right: 8px;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
@@ -22,6 +22,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
+    word-spacing: 1px;
     color: #414141;
 }
 
@@ -57,7 +58,7 @@ img.star {
     width: 256px;
     height: 40px;
     margin: 8px;
-
+    background-color: white;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
@@ -65,8 +66,17 @@ img.star {
     display: flex;
     align-items: center;
     text-align: center;
-
+    cursor:pointer;
+    transition: all 0.75s;
+    transition: color 0s;
     /* Main/Secondary */
     color: #70C05B;
+
+}
+
+.product-button.active {
+    background-color: #FF6633;
+    color: white;
+    border: 1px solid #FF6633;
 
 }

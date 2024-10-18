@@ -5,6 +5,8 @@
 
 .header {
     position: absolute;
+    margin-left: 207px;
+    width: 1440px;
     height: 72px;
     left: 0px;
     right: 0px;
@@ -12,19 +14,19 @@
     background: #FFFFFF;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    width: auto ;    
 }
 
-.header__logo img{
+.header__logo img {
     width: 152px;
     height: 32px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+}
+.header__logo{
+    width: 152px;
+    height: 32px;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 1px;
-    margin-right: 30px;
+    position: relative;
+    right: 39px;
 }
 
 .header__catalog-button {
@@ -47,13 +49,13 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
+    position: relative;
+    left: 1px;
 }
 
 .header__catalog-button:hover {
     border: 1px #589748 solid 
 }
-
-
 
 .header__catalog-button img {
     width: 24px;
@@ -61,19 +63,21 @@
     margin-right: 15px;
 }
 
+.search-bar {
+    width: 375px;
+    height: 40px;
+    margin-top: 16px;
+    margin-right: 40px; 
+}
 
 .search-bar input {
     box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 16px;
-    margin-top: 16px;
-    margin-right: 40px;
-    gap: 10px;
-    width: 375px;
+    padding: 16px 14px;
     height: 40px;
+
     background: #FFFFFF;
     border: 1px solid #70C05B;
     border-radius: 4px;
@@ -105,6 +109,8 @@
 .header-icons {
     display: flex;
     flex-direction: row;
+    position: relative;
+    left: 17px;
 }
 
 .header-icons div:not(:last-child) {
@@ -164,8 +170,8 @@
     color: white;
     background: #FF6633;
     border-radius: 4px;
-    font-size: 7px;
-    height: 11px;
+    font-size: 12px;
+    height: min-content;
     width: 11px;
 }
 

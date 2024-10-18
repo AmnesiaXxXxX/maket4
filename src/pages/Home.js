@@ -21,7 +21,7 @@ const products = [
   },
   {
     id: 3,
-    name: 'Колбаса сырокопченая',
+    name: 'Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...',
     description: 'МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...',
     oldPrice: 50.50,
     newPrice: 44.50,
@@ -30,7 +30,7 @@ const products = [
   },
   {
     id: 4,
-    name: 'Сосиски вареные',
+    name: 'Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...',
     description: 'МЯСНАЯ ИСТОРИЯ Молочные и С сыром...',
     oldPrice: 50.50,
     newPrice: 44.50,
@@ -39,11 +39,11 @@ const products = [
   },
 ];
 
+
 const Home = () => {
-  
   return (
     <div className="content">
-      <img src="../../images/ad1440.png" alt=""/>
+      <img className='ad-image' src="../../images/ad1440.png" alt=""/>
       <div className="promotions">
         <h2 className='products__title'>Акции</h2>
         <div className="products-grid">
