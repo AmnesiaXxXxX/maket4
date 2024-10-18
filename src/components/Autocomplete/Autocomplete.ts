@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Autocomplete.css';
+import './styles/Autocomplete.css';
 
 const Autocomplete = ({ suggestions }) => {
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);

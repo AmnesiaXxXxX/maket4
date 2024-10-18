@@ -1,39 +1,47 @@
 import React from 'react';
 import "./Home.css"
-import Product from "../components/Products"
+import Product from "../../components/Products"
 const products = [
   {
     id: 1,
+    count: 1,
     name: 'Г/Ц Блинчики с мясом вес, Россия',
     country: 'Россия',
     oldPrice: 50.50,
     newPrice: 44.50,
+    discount: 10,
     imageUrl: '/images/products/blinchiki.png',
     rating: 2,
   },
   {
     id: 2,
+    count: 1,
     name: 'Молоко ПРОСТОКВАШИНО Паст. питьевое цельное отборное...',
     oldPrice: 50.50,
     newPrice: 44.50,
+    discount: 10,
     imageUrl: '/images/products/moloko.png',
     rating: 3,
   },
   {
     id: 3,
+    count: 1,
     name: 'Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...',
     description: 'МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...',
     oldPrice: 50.50,
     newPrice: 44.50,
+    discount: 10,
     imageUrl: '/images/products/kalbasa.png',
     rating: 5,
   },
   {
     id: 4,
+    count: 1,
     name: 'Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...',
     description: 'МЯСНАЯ ИСТОРИЯ Молочные и С сыром...',
     oldPrice: 50.50,
     newPrice: 44.50,
+    discount: 10,
     imageUrl: '/images/products/sosiski.png',
     rating: 4,
   },

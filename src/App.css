@@ -4,10 +4,11 @@
   justify-content: center;
   align-content: center;
 }
-*{ 
+* { 
+  margin: 0px;  
   justify-content: center;
 }
 .content {
   justify-content: center;
-  margin-top: 72px
+    width: 1440px;
 }

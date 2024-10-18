@@ -4,13 +4,9 @@
 }
 
 .header {
-    position: absolute;
-    margin-left: 207px;
     width: 1440px;
     height: 72px;
-    left: 0px;
-    right: 0px;
-    top: 0px;
+
     background: #FFFFFF;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -20,7 +16,9 @@
     width: 152px;
     height: 32px;
 }
+
 .header__logo{
+    cursor: pointer;
     width: 152px;
     height: 32px;
     margin-top: 20px;
@@ -214,10 +212,10 @@
 
 .search-bar button {
     background: url('../../public/images/icons/search_icon.png') center / cover;
-    background-size: 24px 24px; /* Размер иконки (ширина x высота) */
-    background-position: 98% -100%; /* Позиция иконки внутри поля */
-    background-repeat: no-repeat; /* Предотвращает повторение изображения */
-    padding-right: 35px; /* Отступ, чтобы текст не перекрывал иконку */
+    background-size: 24px 24px; 
+    background-position: 98% -100%;
+    background-repeat: no-repeat;
+    padding-right: 35px;
     border: none;
     height: 42px;
     width: 42px;
