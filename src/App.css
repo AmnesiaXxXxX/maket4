@@ -6,3 +6,14 @@
   height: 40vmin;
   pointer-events: none;
 }
+
+
+.App * {
+  margin: 0px;
+  padding: 0px;
+}
+
+.App a {
+  text-decoration: none;
+  color: black;
+}
