@@ -1,9 +1,9 @@
 import React from 'react';
-import "./Header.css";
+import "./Header.scss";
 import { Link } from 'react-router-dom';
 import Autocomplete from './Autocomplete/Autocomplete';
-export interface HeaderProps {
-}
+
+export interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = () => {
     const products = [
@@ -51,6 +51,7 @@ export const Header: React.FC<HeaderProps> = () => {
           rating: 4,
         },
       ];
+
       const suggestion = [
         'JavaScript', 'TypeScript', 'React', 'Redux', 'NodeJS', 'Express', 'MongoDB',
         'HTML', 'CSS', 'Sass', 'LESS', 'Angular', 'Vue', 'Next.js', 'Gatsby',
@@ -60,23 +61,37 @@ export const Header: React.FC<HeaderProps> = () => {
         'Jenkins', 'CircleCI', 'TravisCI', 'Yarn', 'npm', 'pnpm', 'D3.js', 'Chart.js',
         'Lodash', 'Moment.js', 'Ramda', 'RxJS', 'MobX', 'Redux Saga'
       ];
+
     return (
         <header className="header">
             <div className="header__content">
-                <img className='logo' src="images/logo152.png"></img>
+                <img className="header__logo" src="images/logo152.png" alt="logo"/>
                 
-                <Link className='header__content__catalog' to="/"><img src='images/icons/menu-icon-white.png'></img>Каталог</Link>
+                <Link className="header__catalog" to="/">
+                    <img className="header__catalog-logo" src='images/icons/menu-icon-white-24px.png' alt="catalog-icon"/>
+                    <p>Каталог</p>
+                </Link>
+                
                 <Autocomplete suggestions={suggestion} />
-                <div className="header__content__user-space">
-                    <Link to="/register">Избранное</Link>
-                    <Link to="/login">Заказы</Link>
-                    <Link to="/cart">Корзина</Link>
-
+                
+                <div className="header__user-space">
+                    <Link to="/register">
+                        <img className="header__favorites-logo" src="images/icons/favorites-icon-white-24px.png" alt="favorites-icon"/>
+                        Избранное
+                    </Link>
+                    <Link to="/login">
+                        <img className="header__favorites-logo" src="images/icons/favorites-icon-white-24px.png" alt="orders-icon"/>
+                        Заказы
+                    </Link>
+                    <Link to="/cart">
+                        <img className="header__favorites-logo" src="images/icons/favorites-icon-white-24px.png" alt="cart-icon"/>
+                        Корзина
+                    </Link>
                 </div>
-                <div className="header__content__user-info">
-                    <img className="header__content__user-info__avatar" alt="User avatar"/>
-                    <div className="header__content__user-info__name">
-                    </div>
+                
+                <div className="header__user-info">
+                    <img className="header__user-info__avatar" src="images/avatar.png" alt="User avatar"/>
+                    <span className="header__user-info__name">Алексей</span>
                 </div>  
             </div>
         </header>
