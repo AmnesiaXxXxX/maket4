@@ -70,13 +70,13 @@ const Autocomplete: React.FC<AutocompleteProps> = ({ suggestions }) => {
     <div className="autocomplete">
       <input
         type="text"
-        className={`search-bar ${filteredSuggestions.length > 0 ? 'with-suggestions' : ''}`}
+        className={`search-bar ${inputFocused &&  filteredSuggestions.length > 0 ? 'with-suggestions' : ''}`}
         value={inputValue}
         onChange={handleChange}
         onFocus={handleFocus}
         onBlur={handleBlur}
         onKeyDown={handleKeyDown}
-        placeholder="Search..."
+        placeholder="Найти товар"
       />
       {inputFocused && filteredSuggestions.length > 0 && (
         <ul className={filteredSuggestions.length < 1 ? "suggestions-list empty" : "suggestions-list"}>
