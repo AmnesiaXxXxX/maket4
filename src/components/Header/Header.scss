@@ -1,11 +1,14 @@
 @media (min-width: 768px) {
     .header {
+        
+        max-width: 1654px;
+
         &__content {
             display: flex;
-            justify-content: center;
+            justify-content: left;
             align-items: center;
-            max-width: 1440px;
-            
+            margin-left: 216px;
+            padding-left: 116px;
             height: 72px;
             background: #FFFFFF;
             box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
@@ -20,6 +23,7 @@
             width: 152px;
             height: 32px;
             margin-right: 40px;
+            cursor: pointer;
         }
 
         &__catalog {
@@ -40,7 +44,7 @@
 
         &__catalog p {
             color: white;
-
+            padding-right: 20px
         }
         &__catalog-link {
             font-style: normal;
@@ -55,7 +59,8 @@
         &__catalog-logo {
             width: 24px;
             height: 24px;
-            margin-right: 8px;
+            margin-right: 24px;
+
         }
 
         &__search-bar {
@@ -78,7 +83,6 @@
 
         &__user-space {
             margin-left: 40px;
-            margin-right: 40px;
             display: flex;
             flex-direction: row;
         }
@@ -89,19 +93,33 @@
             justify-content: center;
             align-items: center;
             padding-top: 0px;
+            margin-bottom: 10px;
             width: 24px;
             height: 24px;
         }
-        &__user-space__container {
-            margin-left: 20px
+        &__user-space a {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            color: #414141;
+
+        }
+
+        &__user-space__container:not(:first-child) {
+            margin-left: 25px
+            
         }
         &__user-space__container img {
             margin-left: 25%
+
         }
         &__user-info {
             display: flex;
             flex-direction: row;
             align-items: center;
+            margin-left: 47px;
+
         }
         
         &__user-info__avatar {

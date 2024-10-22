@@ -65,7 +65,9 @@ export const Header: React.FC<HeaderProps> = () => {
     return (
         <header className="header">
             <div className="header__content">
-                <img className="header__logo" src="images/logo152.png" alt="logo"/>
+                <Link  to="/">
+                  <img className="header__logo" src="images/logo152.png" alt="logo"/>
+                </Link>
                 
                 <Link className="header__catalog" to="/">
                     <img className="header__catalog-logo" src='images/icons/menu-icon-white-24px.png' alt="catalog-icon"/>
@@ -75,11 +77,11 @@ export const Header: React.FC<HeaderProps> = () => {
                 <Autocomplete suggestions={suggestion} />
                 
                 <div className="header__user-space">
-                    <Link to="/register" className='header__user-space__container'>
+                    <Link to="/favorite" className='header__user-space__container'>
                         <img className="header__favorites-logo" src="images/icons/favorites-icon-white-24px.png" alt="favorites-icon"/>
                         Избранное
                     </Link>
-                    <Link to="/login" className='header__user-space__container'>
+                    <Link to="/orders" className='header__user-space__container'>
                         <img className="header__favorites-logo" src="images/icons/orders-icon-white-24px.png" alt="orders-icon"/>
                         Заказы
                     </Link>
@@ -87,7 +89,7 @@ export const Header: React.FC<HeaderProps> = () => {
                         <img className="header__favorites-logo" src="images/icons/cart-icon-white-24px.png" alt="cart-icon"/>
                         Корзина
                         <div>
-                          {/* TODO здесь будет выведено количество товаров в корзине */}
+                          {/* TODO здесь будет выведено количество товаров в корзине */}  
                         </div>
                     </Link>
                 </div>
