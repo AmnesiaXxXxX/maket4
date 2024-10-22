@@ -1,24 +1,23 @@
 import "./Products.scss"
-import {useState , useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import ProductC from '../../../classes/ProductC';
-
 
 const Rating: React.FC<{rating: number}> = ({ rating }) => {
   const stars = [];
   for (let i = 0; i < 5; i++) {
     stars.push(
       <span className='image-wrapper' key={i}>
-        <img style={{ filter: i < rating ? 'orange' :  'grayscale(100%)' }} className="star" src='/images/icons/star_icon.png'>
-        </img>
+        <img style={{ filter: i < rating ? 'orange' : 'grayscale(100%)' }} className="star" src='/images/icons/star_icon.png' alt={`Star ${i}`} />
       </span>
     );
   }
   return <div className='stars'>{stars}</div>;
 };
 
-// Компонент для отображения продукт
+// Компонент для отображения продукта
 const ProductCard: React.FC<{product: ProductC}> = ({ product }) => {
   const [onActive, setOnActive] = useState<boolean>(false);
+  const [imageError, setImageError] = useState<boolean>(false); // состояние для обработки ошибки загрузки изображения
 
   // Проверяем при монтировании, есть ли товар в корзине
   useEffect(() => {
@@ -48,12 +47,21 @@ const ProductCard: React.FC<{product: ProductC}> = ({ product }) => {
 
   return (
     <div className="product-card">
-      <img className="product-image" src={product.imageUrl} alt={product.name} />
+      {imageError ? (
+        <div className="white-square">Не найдена картинка {product.name}</div>
+      ) : (
+        <img
+          className="product-image"
+          src={String(product.imageUrl)}
+          alt={product.name}
+          onError={() => setImageError(true)} // Если картинка не загружается, показываем белый квадрат
+        />
+      )}
       <p>
         <span className="new-price">{product.newPrice.toFixed(2)} ₽</span>{' '}
         <span className="old-price">{product.oldPrice.toFixed(2)} ₽</span>
       </p>
-      <p className="about-card" >
+      <p className="about-card">
         <span className="with-card">С картой</span>{' '}
         <span className="without-card">Обычная</span>
       </p>
