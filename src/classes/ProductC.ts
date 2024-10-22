@@ -1,11 +1,13 @@
+import { PathLike } from "fs";
+
 interface ProductC {
     id: number;
     count: number;
     name?: string;
-    oldPrice: number;
     newPrice: number;
+    oldPrice: number;
     discount?: number;
-    imageUrl?: string;
+    imageUrl?: PathLike;
     rating: number;
 }
 
