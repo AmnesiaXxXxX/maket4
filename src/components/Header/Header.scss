@@ -78,13 +78,26 @@
 
         &__user-space {
             margin-left: 40px;
+            margin-right: 40px;
+            display: flex;
+            flex-direction: row;
         }
 
         &__favorites-logo {
+            display: flex;  
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding-top: 0px;
             width: 24px;
             height: 24px;
         }
-
+        &__user-space__container {
+            margin-left: 20px
+        }
+        &__user-space__container img {
+            margin-left: 25%
+        }
         &__user-info {
             display: flex;
             flex-direction: row;
@@ -94,6 +107,7 @@
         &__user-info__avatar {
             width: 40px;
             height: 40px;
+            margin-right: 10px  ;
         }
     }
 }

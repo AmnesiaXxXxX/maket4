@@ -15,20 +15,22 @@
     outline: none;
 }
 
-    .search-bar.with-suggestions {
+.search-bar.with-suggestions {
         border-bottom-right-radius: 0px;
         border-bottom-left-radius: 0px;
         border-bottom: none;
-    }
+}
+
 .suggestions-list {
     position: absolute;
     top:55px;
-    max-height: 376px;
+    max-height: 176px;
     width: 373px;
     border: 1px solid #70C05B ;
     border-top: none; /* Убираем верхнюю границу */
     overflow-y: auto;
     background-color: white;
+
 }
 
 .suggestions-list.empty {

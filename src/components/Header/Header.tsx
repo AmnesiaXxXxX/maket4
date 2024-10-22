@@ -75,17 +75,20 @@ export const Header: React.FC<HeaderProps> = () => {
                 <Autocomplete suggestions={suggestion} />
                 
                 <div className="header__user-space">
-                    <Link to="/register">
+                    <Link to="/register" className='header__user-space__container'>
                         <img className="header__favorites-logo" src="images/icons/favorites-icon-white-24px.png" alt="favorites-icon"/>
                         Избранное
                     </Link>
-                    <Link to="/login">
-                        <img className="header__favorites-logo" src="images/icons/favorites-icon-white-24px.png" alt="orders-icon"/>
+                    <Link to="/login" className='header__user-space__container'>
+                        <img className="header__favorites-logo" src="images/icons/orders-icon-white-24px.png" alt="orders-icon"/>
                         Заказы
                     </Link>
-                    <Link to="/cart">
-                        <img className="header__favorites-logo" src="images/icons/favorites-icon-white-24px.png" alt="cart-icon"/>
+                    <Link to="/cart" className='header__user-space__container'>
+                        <img className="header__favorites-logo" src="images/icons/cart-icon-white-24px.png" alt="cart-icon"/>
                         Корзина
+                        <div>
+                          {/* TODO здесь будет выведено количество товаров в корзине */}
+                        </div>
                     </Link>
                 </div>
                 

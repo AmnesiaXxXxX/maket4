@@ -39,12 +39,17 @@ const Autocomplete: React.FC<AutocompleteProps> = ({ suggestions }) => {
 
     if (filtered.length === 0) {
       setFilteredSuggestions(['Результатов по вашему запросу нет!']);
+      setHighlightedIndex(-1);
     }
 
     setHighlightedIndex(-1);
   };
 
   const handleSelect = (value: string) => {
+
+    if (value === 'Результатов по вашему запросу нет!') {
+      return;
+    }
     setInputValue(value);
     setFilteredSuggestions([]);
     setHighlightedIndex(-1);
@@ -83,7 +88,7 @@ const Autocomplete: React.FC<AutocompleteProps> = ({ suggestions }) => {
           {filteredSuggestions.map((suggestion, index) => (
             <li
               key={suggestion}
-              className={index === highlightedIndex ? 'highlighted' : ''}
+              className={index === highlightedIndex ? 'highlighted' : '' }
               onClick={() => handleSelect(suggestion)}
               onMouseOver={() => setHighlightedIndex(index)}
             >
