@@ -1,0 +1,29 @@
+@media (max-width: 361px) {
+    .header {
+        &__content {
+            margin-left: 0px;
+            padding: 0px;
+        }
+
+
+        &__logo {   
+            width: 49px;
+            height: 40px;
+            margin-left: 16px;
+        }
+
+
+        
+
+        &__catalog {
+            display: none;
+        }
+
+        &__user-space {
+            display: none;
+        }
+        &__user-info {
+            display: none;
+        }
+    }
+}

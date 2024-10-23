@@ -1,0 +1,40 @@
+@media (max-width: 768px) and (min-width: 361px) {
+    .header {
+
+        &__content {
+            margin-left: 0px;
+            padding: 0px;
+        }
+
+        &__logo {   
+            width: 49px;
+            height: 40px;
+            margin-left: 20px;
+        }
+
+        &__catalog {
+            margin: 0px;
+            margin-left: 20px;
+        }
+        
+        &__catalog-logo {
+            margin: 0px;
+        }
+
+        &__catalog p {
+            display: none;
+        }
+
+        &__user-space {
+            margin-left: 20px;
+        }
+
+        &__user-info {
+            margin-left: 20px;
+        }
+
+        &__user-info__name {
+            display: none;
+        }
+    }
+}
