@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./Cart.scss"
 import ProductC from '../../classes/ProductC';
-
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 const getCart = (): ProductC[] => {
     const cart = localStorage.getItem('cart');
     return cart ? JSON.parse(cart) : [];
@@ -17,11 +17,11 @@ const Cart: React.FC = () => {
 
     return (
         <div className="content">
-            {/* <Breadcrumb/> */}
+            <Breadcrumb/>
             <h1 className="cart__title">Корзина</h1>
             <div className="cart__content">
                 {cart.map((product: ProductC) => (
-                    <div key={product.id} className="cart-product-card">
+                    <section key={product.id} className="cart-product-card">
                         <img className="cart-product-image" src={String(product.imageUrl)} alt={product.name} />
                         <p className="cart-product-name">{product.name}</p>
                         <p>
@@ -73,7 +73,7 @@ const Cart: React.FC = () => {
                                 -
                             </button>
                         </div>
-                    </div>
+                    </section>
                 ))}
             </div>
         </div>

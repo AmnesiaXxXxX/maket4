@@ -1,5 +1,7 @@
 import React from 'react';
-import "./Autocomplete.css"
+import "./Autocomplete.scss"
+import "./Autocomplete360.scss"
+import "./Autocomplete768.scss"
 
 interface AutocompleteProps {
   suggestions: string[];
@@ -10,13 +12,6 @@ const Autocomplete: React.FC<AutocompleteProps> = ({ suggestions }) => {
   const [inputValue, setInputValue] = React.useState<string>('');
   const [inputFocused, setInputFocused] = React.useState<boolean>(false);
   const [highlightedIndex, setHighlightedIndex] = React.useState<number>(-1);
-
-  const handleSend = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === 'Enter') {
-      console.log(' ', inputValue);
-      setInputValue('');
-    }
-  };
 
   const handleFocus = () => {
     setInputFocused(true);

@@ -1,57 +1,13 @@
 import React from 'react';
 import "./Header.scss";
+import "./Header768.scss";
+import "./Header360.scss";
+
 import { Link } from 'react-router-dom';
 import Autocomplete from './Autocomplete/Autocomplete';
-
 export interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = () => {
-    const products = [
-        {
-          id: 1,
-          count: 1,
-          name: 'Г/Ц Блинчики с мясом вес, Россия',
-          country: 'Россия',
-          oldPrice: 50.50,
-          newPrice: 44.50,
-          discount: 10,
-          imageUrl: '/images/products/blinchiki.png',
-          rating: 2,
-        },
-        {
-          id: 2,
-          count: 1,
-          name: 'Молоко ПРОСТОКВАШИНО Паст. питьевое цельное отборное...',
-          oldPrice: 50.50,
-          newPrice: 44.50,
-          discount: 10,
-          imageUrl: '/images/products/moloko.png',
-          rating: 3,
-        },
-        {
-          id: 3,
-          count: 1,
-          name: 'Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...',
-          description: 'МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...',
-          oldPrice: 50.50,
-          newPrice: 44.50,
-          discount: 10,
-          imageUrl: '/images/products/kalbasa.png',
-          rating: 5,
-        },
-        {
-          id: 4,
-          count: 1,
-          name: 'Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...',
-          description: 'МЯСНАЯ ИСТОРИЯ Молочные и С сыром...',
-          oldPrice: 50.50,
-          newPrice: 44.50,
-          discount: 10,
-          imageUrl: '/images/products/sosiski.png',
-          rating: 4,
-        },
-      ];
-
       const suggestion = [
         'JavaScript', 'TypeScript', 'React', 'Redux', 'NodeJS', 'Express', 'MongoDB',
         'HTML', 'CSS', 'Sass', 'LESS', 'Angular', 'Vue', 'Next.js', 'Gatsby',
@@ -61,12 +17,29 @@ export const Header: React.FC<HeaderProps> = () => {
         'Jenkins', 'CircleCI', 'TravisCI', 'Yarn', 'npm', 'pnpm', 'D3.js', 'Chart.js',
         'Lodash', 'Moment.js', 'Ramda', 'RxJS', 'MobX', 'Redux Saga'
       ];
+        const [isMobileDevice, setIsMobileDevice] = React.useState(false);
 
+        React.useEffect(() => {
+        const handleResize = () => {
+            setIsMobileDevice(window.innerWidth <= 768);
+        };
+
+        // Проверка ширины окна при монтировании компонента
+        handleResize();
+
+        // Добавляем слушатель события изменения размера окна
+        window.addEventListener("resize", handleResize);
+
+        // Удаляем слушатель при размонтировании компонента
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+        }, []);
     return (
         <header className="header">
             <div className="header__content">
                 <Link  to="/">
-                  <img className="header__logo" src="images/logo152.png" alt="logo"/>
+                  <img className="header__logo" src={ isMobileDevice ? "images/logo49.png" : "images/logo152.png"} alt="logo"/>
                 </Link>
                 
                 <Link className="header__catalog" to="/">

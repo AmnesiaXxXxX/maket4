@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState, useEffect }from 'react';
 import "./Home.scss"
 import Product from "./components/Products"
 import ProductC from '../../classes/ProductC';
@@ -249,9 +249,27 @@ const products: ProductC[] = [
 
 
 const Home: React.FC = () => {
+  const [isMobileDevice, setIsMobileDevice] = useState(window.innerWidth <= 768);
+
+        useEffect(() => {
+        const handleResize = () => {
+            setIsMobileDevice(window.innerWidth <= 768);
+        };
+
+        // Проверка ширины окна при монтировании компонента
+        handleResize();
+
+        // Добавляем слушатель события изменения размера окна
+        window.addEventListener("resize", handleResize);
+        
+        // Удаляем слушатель при размонтировании компонента
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+        }, []);
   return (
     <div className="home">
-      <img className="home__ad-image" src="../../images/ad1440.png" alt="" />
+      <img className="home__ad-image" src={ isMobileDevice ? "../../images/ad768.png" : "../../images/ad1440.png"} alt="" />
       <div className="home__promotions">
         <h2 className="home__promotions-title">Акции</h2>
         <div className="home__promotions-grid"> 
