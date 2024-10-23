@@ -1,3 +1,10 @@
+.content { 
+    margin-left: 116px;
+    background-color: #fbf9ec;
+
+    
+}
+
 .cart {
     &__title {
         /* Корзина */
@@ -16,19 +23,33 @@
         color: #414141;
 
     }
+    &__content {
+        max-width: 886px;;
+        max-height: 378px;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+    }
+
+    
 
     &-product-card {
         display: flex;
         flex-direction: row;
         padding: 0px;
         gap: 16px;
-
+        margin-bottom: 24px;
         width: 876px;
         height: 72px;
 
         background: #FFFFFF;
         box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
         border-radius: 4px;
+        transition: box-shadow 0.4s ease-in-out;
+    }
+
+    &-product-card:hover {
+        box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
     }
 
     &-product-image {
